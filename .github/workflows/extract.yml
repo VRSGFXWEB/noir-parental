@@ -17,10 +17,17 @@ jobs:
       - name: Extract zip
         run: unzip -o "noir-parental-control.zip" -d .
 
+      - name: Debug - lihat isi folder
+        run: |
+          echo "=== Isi root ==="
+          ls -la
+          echo "=== Cari folder child-app-android ==="
+          find . -type d -name "child-app-android"
+
       - name: Commit hasil extract
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add noir-parental/
+          git add .
           git commit -m "Extract project zip" || echo "Tidak ada perubahan"
           git push
