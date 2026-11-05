@@ -18,11 +18,7 @@ jobs:
         run: unzip -o "noir-parental-control.zip" -d .
 
       - name: Debug - lihat isi folder
-        run: |
-          echo "=== Isi root ==="
-          ls -la
-          echo "=== Cari folder child-app-android ==="
-          find . -type d -name "child-app-android"
+        run: ls -la
 
       - name: Commit hasil extract
         run: |
