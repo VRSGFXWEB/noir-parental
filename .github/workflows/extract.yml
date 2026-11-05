@@ -14,8 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Extract zip
-        run: unzip -o "noir-parental-control.zip" -d .
+      - name: Extract zip (kecuali folder .github)
+        run: |
+          unzip -o "noir-parental-control.zip" -d /tmp/extracted
+          rm -rf /tmp/extracted/.github
+          cp -r /tmp/extracted/. .
 
       - name: Debug - lihat isi folder
         run: ls -la
