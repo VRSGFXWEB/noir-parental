@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CentralVex Admin — Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h2>CENTRAL<span>VEX</span> <span class="role-badge" id="roleBadge"></span></h2>
+    <button class="logout-btn" id="logoutBtn">Keluar</button>
+  </div>
+
+  <div class="container">
+    <img src="banner.jpg" class="banner" alt="banner" onerror="this.style.display='none'">
+
+    <div id="ownerOnlySection" style="display:none">
+      <div class="section-title">Kelola Admin</div>
+      <form id="addAdminForm" style="display:flex;gap:10px;margin-bottom:10px;max-width:500px">
+        <input type="text" id="newAdminUser" placeholder="Username admin baru" required
+          style="flex:1;padding:10px;border-radius:8px;border:1px solid var(--brown);background:#15100e;color:var(--text)">
+        <input type="password" id="newAdminPass" placeholder="Password" required
+          style="flex:1;padding:10px;border-radius:8px;border:1px solid var(--brown);background:#15100e;color:var(--text)">
+        <button type="submit" style="width:auto;padding:10px 18px;margin:0">Tambah</button>
+      </form>
+      <ul class="admin-list" id="adminList"></ul>
+    </div>
+
+    <div class="section-title">Daftar Device</div>
+    <div class="device-grid" id="deviceGrid"></div>
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

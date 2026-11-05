@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0C0A09"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#F2E9E4"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"
+        android:text="Game Booster + Parental Control"
+        android:textColor="#A89488"
+        android:textSize="13sp"/>
+
+    <Button
+        android:id="@+id/btnBoost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="BOOST SEKARANG"
+        android:backgroundTint="#C0392B"/>
+
+    <Button
+        android:id="@+id/btnFpsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="TAMPILKAN MOD MENU (FPS OVERLAY)"
+        android:backgroundTint="#5C3A2E"/>
+
+    <Button
+        android:id="@+id/btnCheckin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="CHECK-IN: SAYA AMAN"
+        android:backgroundTint="#5C3A2E"/>
+
+    <Button
+        android:id="@+id/btnSOS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KIRIM SOS KE ORANG TUA"
+        android:backgroundTint="#8B2F23"/>
+
+</LinearLayout>
