@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0C0A09"
+    android:padding="28dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Izin yang dibutuhkan"
+        android:textColor="#F2E9E4"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Aplikasi ini butuh izin berikut supaya orang tua bisa memantau lokasi dan mengirim notifikasi. Semua izin ini terlihat di pengaturan HP kamu kapan saja."
+        android:textColor="#A89488"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1412"
+        android:padding="16dp"
+        android:textColor="#F2E9E4"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnGrantPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BERIKAN IZIN"
+        android:backgroundTint="#C0392B"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LANJUTKAN"
+        android:backgroundTint="#5C3A2E"
+        android:enabled="false"/>
+
+</LinearLayout>

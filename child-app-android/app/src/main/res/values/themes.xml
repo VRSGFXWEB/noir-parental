@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.ParentalControl" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#C0392B</item>
+        <item name="android:windowBackground">#0C0A09</item>
+    </style>
+</resources>
