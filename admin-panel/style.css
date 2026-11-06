@@ -118,3 +118,61 @@ textarea,.feature-box input[type=text]{
   background:var(--panel);padding:10px 14px;border-radius:8px;margin-bottom:8px;
   display:flex;justify-content:space-between;font-size:13px;border:1px solid var(--brown);
 }
+
+/* Profile menu pojok kanan atas */
+.profile-menu-wrap{position:relative}
+.profile-btn{
+  width:auto;margin:0;padding:8px;background:var(--panel-2);border:1px solid var(--brown);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.profile-dropdown{
+  display:none;position:absolute;right:0;top:46px;background:var(--panel);
+  border:1px solid var(--brown);border-radius:10px;min-width:200px;z-index:50;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);overflow:hidden;
+}
+.profile-dropdown.open{display:block}
+.profile-dropdown-item{
+  display:block;width:100%;text-align:left;padding:12px 14px;background:none;border:none;
+  color:var(--text);font-size:13px;cursor:pointer;margin:0;border-radius:0;
+  border-bottom:1px solid var(--brown);
+}
+.profile-dropdown-item:last-child{border-bottom:none}
+.profile-dropdown-item:hover{background:var(--panel-2)}
+
+/* Modal */
+.modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;
+  align-items:center;justify-content:center;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  background:var(--panel);border:1px solid var(--brown);border-radius:14px;
+  padding:24px;width:90%;max-width:360px;
+}
+.modal-box h3{margin-bottom:14px;font-size:16px}
+.modal-box label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}
+.modal-box input{
+  width:100%;padding:10px;border-radius:8px;border:1px solid var(--brown);
+  background:#15100e;color:var(--text);font-size:13px;
+}
+.modal-actions{display:flex;gap:10px;margin-top:18px}
+.modal-actions .mini{flex:1;margin:0;padding:10px;text-align:center}
+.mini.secondary{background:var(--panel-2);border:1px solid var(--brown)}
+
+/* Device "island" bar - rounded, no emoji, phone-shaped icon */
+.device-island{
+  display:flex;align-items:center;gap:14px;background:var(--panel);
+  border:1px solid var(--brown);border-radius:999px;padding:10px 20px;
+  margin-bottom:12px;cursor:pointer;transition:.2s;
+}
+.device-island:hover{border-color:var(--accent)}
+.device-island .phone-icon-wrap{
+  width:40px;height:40px;border-radius:50%;background:var(--panel-2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.device-island .island-info{flex:1;min-width:0}
+.device-island .island-name{font-size:14px;font-weight:600}
+.device-island .island-meta{font-size:12px;color:var(--muted);margin-top:2px}
+.device-island .island-status{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+}

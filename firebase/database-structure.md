@@ -10,6 +10,13 @@ users/
     created_by: "centralvex" | null
     created_at: timestamp
 
+children/
+  {child_uid}/
+    label: "HP Budi"
+    username: "budi123"
+    added_by: "centralvex" | "nama_admin"
+    added_at: timestamp
+
 devices/
   {device_id}/
     child_name: "Nama Anak"

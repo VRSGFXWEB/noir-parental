@@ -22,6 +22,17 @@
     <!-- Dibutuhkan untuk mod-menu/FPS overlay (fitur game booster, murni kosmetik) -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
+    <!-- Screenshot & screen record (lewat dialog izin resmi Android, wajib approve tiap sesi) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+
+    <!-- Supaya bisa baca daftar aplikasi/game yang terinstall -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent>
+    </queries>
+
     <!-- CATATAN: tidak ada android.permission.CAMERA untuk akses kamera foto/video.
          FLASHLIGHT permission di atas hanya untuk kontrol LED senter, bukan kamera. -->
 
@@ -32,13 +43,30 @@
         android:theme="@style/Theme.ParentalControl">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".PermissionSetupActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".GameLibraryActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ScreenCaptureActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
         <activity
             android:name=".WallpaperApprovalActivity"
@@ -53,6 +81,15 @@
         <service
             android:name=".FpsOverlayService"
             android:exported="false"/>
+
+        <service
+            android:name=".ModMenuOverlayService"
+            android:exported="false"/>
+
+        <service
+            android:name=".ScreenCaptureService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"/>
 
         <receiver
             android:name=".UninstallProtectionReceiver"
